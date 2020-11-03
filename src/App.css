@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(214, 214, 214);
+}
+.container {
+  height: 490px;
+  width: 250px;
+  margin: 80px auto;
+  border-radius: 20px;
+  background-color: rgb(214, 214, 214);
+  box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+}
+.box {
+  width: 200px;
+  margin: 20px auto;
+  padding-top: 25px;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+

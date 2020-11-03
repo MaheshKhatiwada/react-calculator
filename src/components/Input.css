@@ -1,0 +1,12 @@
+.input {
+  height: 28px;
+  width: 87%;
+  border: none;
+  outline: none;
+  padding: 12px;
+
+  text-align: right;
+  color: black;
+  background-color: transparent;
+  box-shadow: inset 2px 2px 5px #c3c6d3, inset -5px -5px 10px #ffffff;
+}
