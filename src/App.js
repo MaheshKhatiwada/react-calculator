@@ -14,14 +14,29 @@ function App() {
   const clearInput = () => {
     setInput("");
   };
+  const clearOne = () => {
+    setInput( input.slice(0, input.length - 1) );
+  }
   
   const calculateResult = () => {
-    setInput(math.evaluate(input));
+    try {
+      setInput(math.evaluate(input));
+    } catch (error) {
+      setInput("Error");
+    }
+    
   };
   return (
     <div className="container">
       <div className="box">
         <Input input={input} />
+        <div className="row">
+            <Button handleClick={addToInput}>(</Button>
+            <Button handleClick={addToInput}>)</Button>
+            <Button handleClick={clearOne}>C</Button>
+            <Button handleClick={clearInput}>AC</Button>
+           
+        </div>
         <div className="row">
             <Button handleClick={addToInput}>7</Button>
             <Button handleClick={addToInput}>8</Button>
@@ -42,14 +57,12 @@ function App() {
             <Button handleClick={addToInput}>+</Button>
         </div>
         <div className="row">
-              <Button handleClick={clearInput}>C</Button>
-              <Button handleClick={addToInput}>0</Button>
               <Button handleClick={addToInput}>.</Button>
+              <Button handleClick={addToInput}>0</Button>
               <Button handleClick={addToInput}>-</Button>
+              <Button handleClick={calculateResult}>=</Button>
         </div>
-        <div className="row">
-          <Button  className="equal" handleClick={calculateResult}>=</Button>
-        </div>
+        
       </div>
     </div>
   )
